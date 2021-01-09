@@ -13,6 +13,7 @@ body {
     margin: 0;
     background-color: rgb(60, 180, 212);
     color: white;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -28,11 +29,16 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: 10px;
-    transition: transform 500ms ease;
+    transition: transform 400ms ease;
     border-radius: 6px;
     transform: translateX(-400%);
     font-size: 40px;
     box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(400%);
     clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
 }
 
@@ -40,7 +46,3 @@ h1 {
     transform: translateX(0);
 }
 
-.box:nth-of-type(even) {
-    transform: translateX(400%);
-    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-}
